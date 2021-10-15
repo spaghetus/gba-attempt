@@ -1,0 +1,14 @@
+[package]
+name = "gba-attempt"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+gba = { git = "https://github.com/rust-console/gba" }
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
